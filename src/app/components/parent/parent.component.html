@@ -1,0 +1,7 @@
+<div>
+  Hello there im parent
+</div>
+
+
+<input [(ngModel)]="dataToBePassed"/>
+<app-child [in]="dataToBePassed"  (out)="whatHappened($event)"></app-child>

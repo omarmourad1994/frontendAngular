@@ -1,0 +1,25 @@
+<div class="mat-card">
+  <div class="mat-card-header">{{isEdit ? 'Edit Employee' : 'Create Employee'}}</div>
+  <div class="mat-card-content">
+    <form [formGroup]="employeeForm">
+
+      <label for="name">Name: </label>
+      <input id="name" type="text" formControlName="name">
+
+      <label for="age">Age: </label>
+      <input id="age" type="number" formControlName="age">
+
+      <label for="country">Country: </label>
+      <input id="country" type="text" formControlName="country">
+
+      <label for="address">Address: </label>
+      <input id="address" type="text" formControlName="address">
+
+    </form>
+
+    <div class="mat-action-list">
+      <button (click)="save()">{{isEdit ? 'Save' : 'Create'}}</button>
+      <button (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+</div>

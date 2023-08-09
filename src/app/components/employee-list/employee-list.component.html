@@ -1,0 +1,18 @@
+<div style="padding: 10px">
+  <h1>Employees List</h1>
+  <input [(ngModel)]="newVal"/>
+  <button (click)="change()">setState</button>
+  <div>
+    <button (click)="createEmployee()">Create Employee</button>
+  </div>
+  <div style="padding: 10px" *ngFor="let employee of employees">
+    <button style="float: right" (click)="deleteEmployee(employee.id)">delete</button>
+    <button style="float: right" (click)="editEmployee(employee)">edit</button>
+    <p>id : {{employee.id}}</p>
+    <p>name : {{employee.name}}</p>
+    <p>age : {{employee.age}}</p>
+    <p>address : {{employee.address}}</p>
+    <p>country : {{employee.country}}</p>
+    <hr>
+  </div>
+</div>
